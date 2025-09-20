@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FinchFrame</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/weblogo.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">finchframe8@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 718133424</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#hero" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#hero" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#hero" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#hero" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="{% static 'assets/img/weblogo.png' %}" alt=""> -->
+          <h1 class="sitename">FINCHFRAME</h1>
+        </a>
+
+        <!-- Success Alert Message -->
+        {% if messages %}
+          <div id="success-alert" class="alert alert-success" style="position: absolute; top: 10px; right: 10px; z-index: 1000; min-width: 300px;">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}">Home<br></a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'FAQs' %}">FAQs</a></li>
+            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="{% url 'contact' %}">CONTACT US</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="{% static 'assets/img/back.png' %}" alt="" data-aos="fade-in">
+
+      <div class="container position-relative">
+
+        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+          <h2>WELCOME TO FINCHFRAME</h2>
+          <p>Your trusted partner for high quality graphic design services. </p>
+        </div><!-- End Welcome -->
+
+        <div class="content row gy-4">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+              <h3>Why Choose FinchFrame?</h3>
+              <p>
+                We empower businesses and individuals with visually compelling designs that leave a lasting impact. We
+                specialize in a wide range of creative solutions, including impactful logo design to establish your brand
+                identity, eye-catching bronchure design to communicate your message effectively, and user-friendly website
+                design to build your online presence.
+
+              </p>
+              <div class="text-center">
+                <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="row gy-4">
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Boost your Social Media with unique graphics</h4>
+                    <p>Our expert social media graphics design services will ensure your content
+                      stands out.
+                    </p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+                   <i class="fa-solid fa-cloud"></i>
+                    <h4>Custom logos for your brand</h4>
+                    <p>We are committed to delivering exceptional design solutions tailored to your unique
+                    needs.</p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+                    <i class="fa-solid fa-file"></i>
+                    <h4>Need a business card for your business?</h4>
+                    <p>We also excell in creating professional business card design for
+                    memorable first impression.</p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+              </div>
+            </div>
+          </div>
+        </div><!-- End  Content-->
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4 gx-5">
+
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/71.png' %}" class="img-fluid" alt="">
+            <!--- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> --->
+          </div>
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              Discover FinchFrame, a dedicated team of creative professionals specializing in logo design, poster design
+              and branding. We are passionate about crafting impactful visuals that help businesses like yours elevate their
+              brand, communicate effectively and achieve their marketing goals.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-house"></i>
+                <div>
+                  <h5>Trusted by many businesses</h5>
+                  <p>FinchFrame has a proven track record of delivering exceptional design services, earning the trust of
+                  numerous clients across various industries.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                  <h5>Specializing in Eco-Friendly Design Solutions</h5>
+                  <p>We are commited to sustainable practices, offering environmentally conscious design options
+                  for businesses looking to minimize their impact.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-thumbs-up"></i>
+                <div>
+                  <h5>Explore Our Comprehensive Design Portfolio</h5>
+                  <p>Discover the breadth of our creative capabilities and see how we've helped businesses like yours
+                  achieve their visual goals.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-people-group"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Our Team</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-diagram-project"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects Done</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-stopwatch"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="1200" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Worked</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fas fa-award"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>At FinchFrame, we are committed to delivering exceptional design solutions tailored
+        to your unique needs.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-brush"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Logo Design</h3>
+              </a>
+              <p>Unique and memorable logos that capture your brand’s identity and leave a lasting impression.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-file"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Poster Design</h3>
+              </a>
+              <p>Bold, eye-catching posters perfect for events, promotions, and advertising—designed to grab attention quickly.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-boxes-packing"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Packaging Design</h3>
+              </a>
+              <p>Visually appealing and functional packaging that enhances product appeal and builds brand recognition.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-dna"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Bronchure Design</h3>
+              </a>
+              <p>Professionally crafted brochures that effectively communicate your message with a clean, engaging layout.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-font-awesome"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Business Card Design</h3>
+              </a>
+              <p>Stylish and impactful business cards that reflect your professionalism and make networking memorable.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-calendar"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Social Media Post Design</h3>
+              </a>
+              <p>Customized, on-brand social media graphics designed to boost engagement and visibility across platforms.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>A showcase of our creative work and design expertise. 
+          Each project highlights our commitment to quality, innovation, and visual impact.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#departments-tab-1">Logo Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-2">Poster Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-3">Social Media Post Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-4">Branding</a>
+              </li>
+
+
+              <!-- <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-5">Eye Care</a>
+              </li> -->
+
+
+
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="departments-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Logo Design</h3>
+                    <p class="fst-italic">Haron Graphics Logo Design</p>
+                    <p>This project features a modern and professional logo design for Haron Graphics. 
+                      The centerpiece is a bold, stylized “HR” monogram enclosed in a partial circular
+                      form, rendered in vibrant blue with a slight embossed effect to add depth and
+                      texture. Complementing the icon is the brand name “Haron Graphics” in a clean,
+                      artistic typeface curved around the logo. This design emphasizes creativity 
+                      and visual impact, ideal for branding across digital and print media.
+                      </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/3d logo.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Poster Design</h3>
+                    <p class="fst-italic">Student Leadership Campaign Poster – Joy Ndanu</p>
+                    <p>This poster was designed for a student leadership campaign under the Kitui County Universities and Colleges Students Association (KUCUSA).
+                       Featuring Joy Ndanu as a candidate for Kitui Central Representative, the design focuses on clarity, confidence, and campaign messaging.
+                       The layout uses bold color blocks—green, yellow, and white—to reflect trust, energy, and professionalism. Strategic use of visual hierarchy 
+                       draws attention to the candidate’s name, slogan, and key values: Commitment, Innovation, and Leadership. The checkmark icon and vote
+                        call-to-action create a strong political branding element, while the urban skyline background adds a youthful, forward-thinking vibe.
+                        Ideal for both digital distribution and printed posters, this project demonstrates how effective design can support personal branding and civic engagement.
+
+</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/joy.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Social Media Post Design</h3>
+                    <p class="fst-italic">Birthday Tribute Social Media Post Design</p>
+                    <p>This vibrant and personalized birthday post design celebrates an individual's journey
+                      through the years. The layout features a circular collage of past portraits arranged 
+                      in a dynamic radial format, highlighting key moments and expressions. At the center is
+                       a standout, full-color image of the celebrant, drawing attention with warm lighting and bold styling.
+                       Set against a soft golden background with glowing stars and a modern "Happy Birthday" greeting, 
+                       the design blends festive warmth with a touch of elegance. Perfectly tailored for platforms like
+                        Instagram or Facebook, this project showcases a balanced use of composition, color harmony, and
+                         photo storytelling to create a visually engaging birthday tribute</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/birthday.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Branding</h3>
+                    <p class="fst-italic">Finch Frame Brand Identity – Mug Mockup</p>
+                    <p>
+                      This project showcases the brand identity design for Finch Frame, 
+                      a modern and dynamic company. The logo features a bold, stylized "F" 
+                      combining deep navy blue and vibrant orange to convey trust, creativity, and forward-thinking.
+                      The mockup presents the brand applied to a ceramic mug, emphasizing real-world
+                      usability and brand cohesion. The use of color inside the mug and on the handle
+                      reinforces brand consistency, while the clean layout on a light wooden surface 
+                      adds warmth and approachability to the presentation. This project reflects 
+                      thoughtful brand execution, ensuring that the identity remains visually 
+                      impactful across both digital and physical touchpoints.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/mug 1.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <div class="tab-pane" id="departments-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div> -->
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Departments Section -->
+
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Here are frequently asked questions for FinchFrame.</p>
+      </div><!-- End Section Title -->>
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What graphic design services do you offer?</h3>
+                <div class="faq-content">
+                  <p>At FinchFrame, I offer a comprehensive range of graphic design services, including logo design and branding, marketing materials(
+                  bronchures,flyers,business cards,social media graphics) and packaging design. I tailor my services to meet your unique  needs and help
+                  your brand stand out.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What information do i need to provide to get started on a project?</h3>
+                <div class="faq-content">
+                  <p>The more information you can provide, the better. This might include your business name and description, your target audience,  any existing branding
+                  guidelines, examples of designs you like, your budget and timeline.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are your rates or how do you price your services?</h3>
+                <div class="faq-content">
+                  <p>Project pricing varies depending on the complexity, scope and estimated time required. We typically provide custom quotes after discussing
+                  your specific needs.For some services, i may offer package deals. Please contact us with details about your project for a personalized quote.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Do you offer package deals or discounts for multiple projects?</h3>
+                <div class="faq-content">
+                  <p>Yes, We often offer package deals for bundled services and can discuss potential discounts for multiple projects. Let's talk about
+                  your overall design needs.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I contact you to discuss my project?</h3>
+                <div class="faq-content">
+                  <p>You can reach us through the contact form on our website, by emailing us at finchframe8@gmail.com or by calling
+                  us at +254 718133424. We're happy to schedule a call or meeting to discuss your design needs in detail.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can I see a portfolio of your previous work?</h3>
+                <div class="faq-content">
+                  <p>Absolutely! You can view our projects on the "Projects" section of our website.This showcases a range of projects We've completed
+                  for various clients.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Testimonials</h3>
+            <p>
+            At FinchFrame, we’re proud to support creatives, students, and entrepreneurs
+            with tailored graphic design solutions that elevate their brands.
+            Here’s what some of our clients have to say.
+            </p>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/y3.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Yash Monsta96</h3>
+                        <h4>SongWriter</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>FinchFrame brought my vision to life with stunning cover art and social media visuals that match my sound perfectly.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/gabz.png' %}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Gabzthegranite</h3>
+                        <h4>Musician & Song Writer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Their designs gave my brand the professional edge it needed. FinchFrame gets the music scene.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/moureen4.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Moureen</h3>
+                        <h4>Student</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>As a student building a personal brand, FinchFrame made it easy and affordable to stand out online.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/cyro.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Cyrus</h3>
+                        <h4>Artist</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>From logos to promo flyers, FinchFrame handled it all with creativity and precision. Truly reliable.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/pic 2.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Haron</h3>
+                        <h4>Entrepreneur</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>FinchFrame transformed my business identity with sleek, modern designs that attract real attention.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>Step into our gallery and explore a visual journey through the diverse design solutions crafted by Haron Graphics.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/bash.png' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/bash.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/bash.png' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/bash.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/Artboard%201.png' %'}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/Artboard%201.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/Artboard%202.png' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/Artboard%202.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/Order%202.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/Order%202.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/service%20p.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/service%20p.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/final.png' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/final.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/CYRO.png' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/CYRO.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in touch with us  we’re here to bring your creative ideas to life and answer any questions you may have.</p>
+      </div><!-- End Section Title -->
+
+      <!-- <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3239005539!2d36.68258325336217!3d-1.3032035601736793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1752769143309!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>00100 Nairobi,Kenya</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 718133424</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>finchframe8@gmail.com</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form  method="POST" action="{% url 'index' %}" class="email-form" data-aos="fade-up" data-aos-delay="200">
+            {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">FINCHFRAME</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>00100</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 718133424</span></p>
+            <p><strong>Email:</strong> <span>finchframe8@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#departments">Projects</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#about">Logo Design</a></li>
+            <li><a href="#about">Poster Design</a></li>
+            <li><a href="#about">Social media post design</a></li>
+            <li><a href="#about">Packaging Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Other Services (Coming Soon)</h4>
+          <ul>
+            <li><a href="#hero">Web Design</a></li>
+            <li><a href="#hero">Web Development</a></li>
+            <li><a href="#hero">Mobile App Development</a></li>
+            <li><a href="#hero">Digital Marketing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">FinchFrame</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+       
+        Designed by Haron M.
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <!-- Success Alert Auto-Hide Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const alert = document.getElementById('success-alert');
+      if (alert) {
+        // Show alert with fade-in effect
+        alert.style.opacity = '0';
+        alert.style.transform = 'translateY(-10px)';
+        alert.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+
+        // Trigger reflow to ensure transition works
+        alert.offsetHeight;
+
+        // Show the alert
+        alert.style.opacity = '1';
+        alert.style.transform = 'translateY(0)';
+
+        // Auto-hide after 5 seconds
+        setTimeout(function() {
+          alert.style.opacity = '0';
+          alert.style.transform = 'translateY(-10px)';
+          setTimeout(function() {
+            if (alert.parentNode) {
+              alert.parentNode.removeChild(alert);
+            }
+          }, 500); // Remove after fade-out transition
+        }, 5000); // 5 seconds
+      }
+    });
+  </script>
+
+</body>
+
+</html>
